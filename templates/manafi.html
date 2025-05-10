@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8" />
+<title>Botões com Logo</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  .container .botao {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  .container .botao:hover {
+    background-color: #ddd;
+  }
+  .container .logo {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+	<table class="table"
+		<th><enter>MANAFI - Manual de Administração de Recursos, Operações e Controle Financeiro</center></th>
+		<tbody>
+		<tr>
+			<td>
+  				<img src="iconMan.png" alt="Sumario" class="logo" />
+				<a href="">Sumario</a>
+			</td>
+		</tr>
+		</tbody>
+		<tbody>
+		<tr>
+			<td>
+  				<img src="iconMan.png" alt="Modulo 1" class="logo" />
+				<a href="">Modulo 1 - Aspecto Geral</a>
+			</td>
+		</tr>
+		</tbody>
+		<tbody>
+		<tr>
+			<td>
+  				<img src="iconMan.png" alt="Modulo 2" class="logo" />
+				<a href="">Modulo 2 - Disponibilidade Financeira</a>
+			</td>
+		</tr>
+		</tbody>
+		<tbody>
+		<tr>
+			<td>
+  				<img src="iconMan.png" alt="Modulo 5" class="logo" />
+				<a href="">Modulo 5 - Adiantamento de Numerário</a>
+			</td>
+		</tr>
+		</tbody>
+		<tbody>
+		<tr>
+			<td>
+  				<img src="iconMan.png" alt="Modulo 7" class="logo" />
+				<a href="">Modulo 7 - Gerir Pagamento</a>
+			</td>
+		</tr>
+		</tbody>
+		<tbody>
+		<tr>
+			<td>
+  				<img src="iconMan.png" alt="Modulo 10" class="logo" />
+				<a href="">Modulo 10 - Operações Financeiras</a>
+			</td>
+		</tr>
+		</tbody>
+		<tbody>
+		<tr>
+			<td>
+  				<img src="iconMan.png" alt="Modulo 19" class="logo" />
+				<a href="">Modulo 19 - Balancetes e Demonstração Financeira</a>
+			</td>
+		</tr>
+		</tbody>
+		<tbody>
+		<tr>
+			<td>
+  				<img src="iconMan.png" alt="Modulo 20" class="logo" />
+				<a href="">Modulo 20 - Depositos Judiciais e Recursais</a>
+			</td>
+		</tr>
+		</tbody>
+		<tbody>
+		<tr>
+			<td>
+  				<img src="iconMan.png" alt="Modulo 22" class="logo" />
+				<a href="">Modulo 22 - Planejamento Economico e Financeiro</a>
+			</td>
+		</tr>
+		</tbody>
+
+	</table>
+
+</div>
+
+<script> 
+    function manafi() {
+    	window.location.href = "{{ url_for('manafi') }}";
+  }
+
+  function manacan() {
+    	window.location.href = "{{ url_for('mancan') }}";
+  }
+
+  function mancon() {
+    	window.location.href = "{{ url_for('mancon') }}";
+  }
+
+    function mancon() {
+      window.open('mancon.html', '_blank');
+    }
+
+    function maneng() {
+    	window.location.href = "{{ url_for('maneng') }}";
+  }
+  
+  function manate() {
+    	window.location.href = "{{ url_for('manate') }}";
+  }
+
+  </script>
+</body>
+</html>

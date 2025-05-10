@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sua Página</title>
+    <style>
+        /* Estilo para a imagem de fundo que ocupa toda a tela */
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('/static/viatura.webp'); /* Substitua pelo caminho da sua imagem */
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Estilo para o menu superior */
+        header {
+            background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Espaço para o corpo do site */
+        main {
+            padding: 20px;
+            min-height: 400px; /* Pode ajustar conforme necessário */
+            background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente para leitura */
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: rgba(0, 0, 0, 0.5);
+            text-align: center;
+            padding: 10px 20px;
+            position: relative;
+            bottom: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Menu superior -->
+    <header>
+        <nav>
+            <a href="#cadastro">Cadastro</a>
+            <a href="#listagem">Listagem</a>
+            <a href="#relatorio">Relatório</a>
+            <a href = "{{url_for('pagina_sobre')}}">Manuais </a> 
+        </nav>
+    </header>
+
+    <!-- Espaço para o corpo do site -->
+    <main>
+        <h1>Bem-vindo aos Manuais Técnicos da ECT!</h1>
+        <p>Este é o espaço para o conteúdo principal.</p>
+        
+        <center><div id="conteudo">Carregando conteúdo...</div></center>
+        
+        
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 Coordenação Regional de Operações - COPER/SPI</p>
+        <p>Gerência de Distribuição - GEDIS </p>
+    </footer>
+
+    <script>
+        // Carrega outro HTML dentro da div com id="conteudo"
+        fetch('/static/outro.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('conteudo').innerHTML = data;
+          })
+          .catch(error => {
+            console.error('Erro ao carregar conteúdo:', error);
+            document.getElementById('conteudo').innerText = 'Erro ao carregar conteúdo.';
+          });
+      </script>    
+</body>
+</html>

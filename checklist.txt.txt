@@ -1,0 +1,25 @@
+hecklist para Resolver o Erro de Carregamento (Not Found)
+🔍 1. Verificar as Rotas no Flask
+ Confirmar se há uma rota @app.route("/manu") ou similar para servir o manu.html
+
+ Verificar se o url_for('pagina_sobre') corresponde a uma função Flask válida
+
+ Certificar que url_for('manafi') e demais estão definidas com rotas corretas
+
+📁 2. Checar Caminhos de Arquivos
+ Garantir que outro.html está mesmo em /static/outro.html
+
+ Verificar se os arquivos de imagem como pastaManuais.png e viatura.webp estão em /static/
+
+ Confirmar se o diretório static/ está corretamente configurado no app Flask
+
+📜 3. Testar o Carregamento Dinâmico de outro.html
+ Validar se o fetch('/static/outro.html') está retornando código 200
+
+ Abrir o console do navegador (F12) e conferir erros de rede (Network)
+
+💡 4. Ajustes Gerais
+ Corrigir erros de digitação, como #realtorio → #relatorio
+
+ Verificar se o botão MANAFI com href="{{ url_for('manafi') }}" funciona corretamente
+

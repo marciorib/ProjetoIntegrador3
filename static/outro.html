@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8" />
+<title>Botões com Logo</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  .container .botao {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  .container .botao:hover {
+    background-color: #ddd;
+  }
+  .container .logo {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+	<table class="table">
+		<tbody>
+		<tr class="nonman">
+
+			<td>
+			<!-- Botão 1 -->
+			<a href="{{ url_for('manafi') }}">
+				<button class="botao">
+				  <img src="/static/pastaManuais.png" alt="Manual de ADM. Recursos, Operações e controle financeiro" class="logo" />
+				  MANAFI
+				</button>
+			  </a>
+			</td>
+
+			<td>
+			<!-- Botão 2 -->
+			<button class="botao">
+  				<img src="/static/pastaManuais.png" alt="Manual de Canais" class="logo" />
+ 				 MANCAN
+			</button>
+			</td>
+
+			<td>
+			<!-- Botão 3 -->
+			<button class="botao">
+  				<img src="/static/pastaManuais.png" alt="Manual de Comunicação" class="logo" />
+ 				 MANCOM
+			</button>
+			</td>
+
+			<td>
+			<!-- Botão 4 -->
+			<button class="botao">
+  				<img src="/static/pastaManuais.png" alt="Manual de Gestão Documental" class="logo" />
+  				MANDOC
+			</button>
+			</td>
+
+			<td>
+			<!-- Botão 5 -->
+			<button class="botao">
+ 		 		<img src="/static/pastaManuais.png" alt="Manual de Engenharia" class="logo" />
+ 				 MANENG
+			</button>
+			</td>
+
+			<td>
+			<!-- Botão 6 -->
+			<button class="botao">
+ 				 <img src="/static/pastaManuais.png" alt="Manual de Atendimento" class="logo" />
+ 				 MANATE
+			</button>
+			</td>
+
+		</tr>
+		</tbody>
+
+	    <tr class="nonman">
+		<tbody>
+		<tr>
+			<td>
+			<!-- Botão 7 -->
+			<button class="botao">
+  				<img src="/static/pastaManuais.png" alt="Manual de Comercialização e Atendimento" class="logo" />
+  				MANCATE
+			</button>
+			</td>
+
+			<td>
+			<!-- Botão 8 -->
+			<button class="botao">
+  				<img src="/static/pastaManuais.png" alt="Manual de Contabilidade" class="logo" />
+ 				 MANCOT
+			</button>
+			</td>
+
+			<td>
+			<!-- Botão 9 -->
+			<button class="botao">
+  				<img src="/static/pastaManuais.png" alt="Manual de Educação" class="logo" />
+ 				 MANEDU
+			</button>
+			</td>
+
+			<td>
+			<!-- Botão 10 -->
+			<button class="botao">
+  				<img src="/static/pastaManuais.png" alt="Manual de Experiência do Cliente" class="logo" />
+  				MANEXP
+			</button>
+			</td>
+			
+			<td>
+			<!-- Botão 11 -->
+			<button class="botao">
+ 		 		<img src="/static/pastaManuais.png" alt="Manual de Auditoria" class="logo" />
+ 				 MANAUD
+			</button>
+			</td>
+
+			<td>
+			<!-- Botão 12 -->
+			<button class="botao">
+ 				 <img src="/static/pastaManuais.png" alt="Manual de Controle Disciplinar" class="logo" />
+ 				 MANCOD
+			</button>
+			</td>
+		</tr>
+	    </tbody>
+
+		<tbody>
+		<tr class="nonman">
+
+			<td>
+			<!-- Botão 13 -->
+			<button class="botao">
+  				<img src="/static/pastaManuais.png" alt="Manual de Distribuição" class="logo" />
+  				MANDIS
+			</button>
+			</td>
+
+			<td>
+			<!-- Botão 14 -->
+			<button class="botao">
+  				<img src="/static/pastaManuais.png" alt="Manual de Encaminhamento" class="logo" />
+ 				 MANENC
+			</button>
+			</td>
+
+			<td>
+			<!-- Botão 15 -->
+			<button class="botao">
+  				<img src="/static/pastaManuais.png" alt="Manual de Faturamento e Cobrança" class="logo" />
+ 				 MANFAC
+			</button>
+			</td>
+
+			<td>
+			<!-- Botão 16 -->
+			<button class="botao">
+  				<img src="/static/pastaManuais.png" alt="Manual de Filatelia" class="logo" />
+  				MANFIL
+			</button>
+			</td>
+
+			<td>
+			<!-- Botão 17 -->
+			<button class="botao">
+ 		 		<img src="/static/pastaManuais.png" alt="Manual Juridico" class="logo" />
+ 				 MANJUR
+			</button>
+			</td>
+
+			<td>
+			<!-- Botão 18 -->
+			<button class="botao">
+ 				 <img src="/static/pastaManuais.png" alt="Manual de Logistica Integrada" class="logo" />
+ 				 MANLOG
+			</button>
+			</td>
+		</tr>
+		</tbody>
+        <tbody>
+		<tr class="nonman">
+
+			<td>
+			<!-- Botão 19 -->
+			<button class="botao">
+  				<img src="/static/pastaManuais.png" alt="Manual de Organização" class="logo" />
+  				MANORG
+			</button>
+			</td>
+
+			<td>
+			<!-- Botão 20 -->
+			<button class="botao">
+  				<img src="/static/pastaManuais.png" alt="Manual de Pessoal" class="logo" />
+ 				 MANPES
+			</button>
+			</td>
+
+			<td>
+			<!-- Botão 21 -->
+			<button class="botao">
+  				<img src="/static/pastaManuais.png" alt="Manual de Governança Coorporativa" class="logo" />
+ 				 MANGOV
+			</button>
+			</td>
+
+			<td>
+			<!-- Botão 22 -->
+			<button class="botao">
+  				<img src="/static/pastaManuais.png" alt="Manual de Licitação e Contratação" class="logo" />
+  				MANLIC
+			</button>
+			</td>
+
+			<td>
+			<!-- Botão 23 -->
+			<button class="botao">
+ 		 		<img src="/static/pastaManuais.png" alt="Manual de Negocios" class="logo" />
+ 				 MANNEG
+			</button>
+			</td>
+
+			<td>
+			<!-- Botão 24 -->
+			<button class="botao">
+ 				 <img src="/static/pastaManuais.png" alt="Manual de Parceiros Estratégicos" class="logo" />
+ 				 MANPAR
+			</button>
+			</td>
+
+		</tr>
+		</tbody>
+        <tbody>
+		<tr class="nonman">
+
+			<td>
+			<!-- Botão 25 -->
+			<button class="botao">
+  				<img src="/static/pastaManuais.png" alt="Manual de Planejamento" class="logo" />
+  				MANPLA
+			</button>
+			</td>
+
+			<td>
+			<!-- Botão 26 -->
+			<button class="botao">
+  				<img src="/static/pastaManuais.png" alt="Manual de Correios Internacional" class="logo" />
+ 				 MANINT
+			</button>
+			</td>
+
+			<td>
+			<!-- Botão 27 -->
+			<button class="botao">
+  				<img src="/static/pastaManuais.png" alt="Manual de Lecitação e Gestão" class="logo" />
+ 				 MANLIG
+			</button>
+			</td>
+
+			<td>
+			<!-- Botão 28 -->
+			<button class="botao">
+  				<img src="/static/pastaManuais.png" alt="Manual de Orçamento e Custo" class="logo" />
+  				MANORC
+			</button>
+			</td>
+
+			<td>
+			<!-- Botão 29 -->
+			<button class="botao">
+ 		 		<img src="/static/pastaManuais.png" alt="Manual de Patrimônio" class="logo" />
+ 				 MANPAT
+			</button>
+			</td>
+
+			<td>
+			<!-- Botão 30 -->
+			<button class="botao">
+ 				 <img src="/static/pastaManuais.png" alt="Manual de Planejamento de Operação e Cliente" class="logo" />
+ 				 MANPOC
+			</button>
+			</td>
+
+		</tr>
+		</tbody>
+		<tbody>
+		<tr class="nonman">
+
+			<td>
+			<!-- Botão 31 -->
+			<button class="botao">
+  				<img src="/static/pastaManuais.png" alt="Manual de Pesquisa, Desenvolvimento e Inovação" class="logo" />
+  				MANPIN
+			</button>
+			</td>
+
+			<td>
+			<!-- Botão 32 -->
+			<button class="botao">
+  				<img src="/static/pastaManuais.png" alt="Manual de Suprimento" class="logo" />
+ 				 MANSUP
+			</button>
+			</td>
+
+			<td>
+			<!-- Botão 33 -->
+			<button class="botao">
+  				<img src="/static/pastaManuais.png" alt="Manual de Segurança Patrimonial" class="logo" />
+ 				 MANSEG
+			</button>
+			</td>
+
+			<td>
+			<!-- Botão 34 -->
+			<button class="botao">
+  				<img src="/static/pastaManuais.png" alt="Manual de Tecnologia da Informação e Comunicação" class="logo" />
+  				MANTIC
+			</button>
+			</td>
+
+			<td>
+			<!-- Botão 35 -->
+			<button class="botao">
+ 		 		<img src="/static/pastaManuais.png" alt="Manual de Serviços Gerais" class="logo" />
+ 				 MANSER
+			</button>
+			</td>
+
+			<td>
+			<!-- Botão 36 -->
+			<button id="botao36" class="botao" onclick="bgChange()">
+ 				 <img src="/static/pastaManuais.png" alt="Manual de Transporte" class="logo" />
+ 				 MANTRA			</button>
+			</td>
+
+		</tr>
+		</tbody>
+
+	</table>
+
+	<button onclick="alert('Hello, Posso ajudar? pergunte a IA!');">
+ 		 Press me
+	</button>
+
+</div>
+
+<script> 
+    function manafi() {
+    	window.location.href = "/manafi";
+    }
+    function mancan() {
+      window.open('mancan.html', '_blank');
+    }
+    function mancom() {
+      window.open('working.html', '_blank');
+    }
+    function mandoc() {
+      window.open('working.html', '_blank');
+    }
+    function maneng() {
+      window.open('working.html', '_blank');
+    }
+    function manate() {
+      window.open('working.html','_blank');
+    }
+	function mancate() {
+      window.open('working.html', '_blank');
+    }
+    function mancot() {
+      window.open('working.html', '_blank');
+    }
+    function manedu() {
+      window.open('working.html', '_blank');
+    }
+    function manexp() {
+      window.open('working.html', '_blank');
+    }
+    function manaud() {
+      window.open('working.html', '_blank');
+    }
+    function mancod() {
+      window.open('working.html','_blank');
+    }
+	function mandis() {
+      window.open('working.html', '_blank');
+    }
+    function manenc() {
+      window.open('working.html', '_blank');
+    }
+    function manfac() {
+      window.open('working.html', '_blank');
+    }
+    function manfil() {
+      window.open('working.html', '_blank');
+    }
+    function manjur() {
+      window.open('working.html', '_blank');
+    }
+    function manlog() {
+      window.open('working.html','_blank');
+    }
+	function manorg() {
+      window.open('manate.html','_blank');
+    }
+	function manpes() {
+      window.open('working.html', '_blank');
+    }
+    function mangov() {
+      window.open('working.html', '_blank');
+    }
+    function manlic() {
+      window.open('working.html', '_blank');
+    }
+    function manneg() {
+      window.open('working.html', '_blank');
+    }
+    function manpar() {
+      window.open('working.html', '_blank');
+    }
+    function manpla() {
+      window.open('working.html','_blank');
+    }
+	function manint() {
+      window.open('working.html','_blank');
+    }
+	function manlig() {
+      window.open('working.html', '_blank');
+    }
+	function manorc() {
+      window.open('working.html', '_blank');
+    }
+	function manpat() {
+      window.open('working.html', '_blank');
+    }
+	function manpoc() {
+      window.open('working.html', '_blank');
+    }
+	function manpin() {
+      window.open('working.html', '_blank');
+    }
+	function mansup() {
+      window.open('working.html', '_blank');
+    }
+	function manseg() {
+      window.open('working.html', '_blank');
+    }
+	function mantic() {
+      window.open('working.html', '_blank');
+    }
+	function manser() {
+      window.open('working.html', '_blank');
+    }
+	function mantra() {
+      window.open('working.html', '_blank');
+    }
+
+
+  </script>
+</body>
+</html>
+
+
+
