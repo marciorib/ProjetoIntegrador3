@@ -66,7 +66,21 @@
     <!-- Espaço para o corpo do site -->
     <main>
         <h1>Bem-vindo aos Manuais Técnicos da ECT!</h1>
-        <p>Este é o espaço para o conteúdo principal.</p>
+        <div style="margin-top: 20px;">
+            <a href="{{ url_for('pagina_pergunta') }}">
+                <button style="
+                    background-color: #3498db;
+                    color: white;
+                    padding: 10px 20px;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                ">
+                    Consultar Manual com IA
+                </button>
+            </a>
+</div>
+
         
         <center><div id="conteudo">Carregando conteúdo...</div></center>
         

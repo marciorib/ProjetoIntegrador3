@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ manual.nome | capitalize }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>{{ manual.nome | capitalize }}</h1>
+    <p>{{ manual.conteudo }}</p>
+    <a href="{{ url_for('home') }}">← Voltar</a>
+</div>
+</body>
+</html>

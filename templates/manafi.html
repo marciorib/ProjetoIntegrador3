@@ -30,80 +30,83 @@
 </style>
 </head>
 <body>
+	<img src="{{ url_for('static', filename='banner-manafi-1920x450.png') }}" alt="Banner Manafi" style="width: 100%; height: auto;">
 
-<div class="container">
+	<div class="container">
 
 	<table class="table"
-		<th><enter>MANAFI - Manual de Administração de Recursos, Operações e Controle Financeiro</center></th>
+		
 		<tbody>
 		<tr>
 			<td>
-  				<img src="iconMan.png" alt="Sumario" class="logo" />
-				<a href="">Sumario</a>
+  				<img src="/static/iconMan.png" alt="Sumario" class="logo" />
+				<!--<a href="{{ url_for('exibir_manual', nome='manfin') }}">Ver conteúdo do Manfin</a>   -->
+				<a href="{{ url_for('em_manutencao') }}">Modulo 0 - Sumario</a>   
+			</td>
+		</tr>
+
+		</tbody>
+		<tbody>
+		<tr>
+			<td>
+  				<img src="/static/iconMan.png" alt="Modulo 1" class="logo" />
+				<a href="{{ url_for('em_manutencao') }}">Modulo 1 - Aspecto Geral</a>
 			</td>
 		</tr>
 		</tbody>
 		<tbody>
 		<tr>
 			<td>
-  				<img src="iconMan.png" alt="Modulo 1" class="logo" />
-				<a href="">Modulo 1 - Aspecto Geral</a>
+  				<img src="/static/iconMan.png" alt="Modulo 2" class="logo" />
+				<a href="{{ url_for('em_manutencao') }}">Modulo 2 - Disponibilidade Financeira</a>
 			</td>
 		</tr>
 		</tbody>
 		<tbody>
 		<tr>
 			<td>
-  				<img src="iconMan.png" alt="Modulo 2" class="logo" />
-				<a href="">Modulo 2 - Disponibilidade Financeira</a>
+  				<img src="/static/iconMan.png" alt="Modulo 5" class="logo" />
+				<a href="{{ url_for('em_manutencao') }}">Modulo 5 - Adiantamento de Numerário</a>
 			</td>
 		</tr>
 		</tbody>
 		<tbody>
 		<tr>
 			<td>
-  				<img src="iconMan.png" alt="Modulo 5" class="logo" />
-				<a href="">Modulo 5 - Adiantamento de Numerário</a>
+  				<img src="/static/iconMan.png" alt="Modulo 7" class="logo" />
+				<a href="{{ url_for('em_manutencao') }}">Modulo 7 - Gerir Pagamento</a>
 			</td>
 		</tr>
 		</tbody>
 		<tbody>
 		<tr>
 			<td>
-  				<img src="iconMan.png" alt="Modulo 7" class="logo" />
-				<a href="">Modulo 7 - Gerir Pagamento</a>
+  				<img src="/static/iconMan.png" alt="Modulo 10" class="logo" />
+				<a href="{{ url_for('em_manutencao') }}">Modulo 10 - Operações Finaceiras</a>
 			</td>
 		</tr>
 		</tbody>
 		<tbody>
 		<tr>
 			<td>
-  				<img src="iconMan.png" alt="Modulo 10" class="logo" />
-				<a href="">Modulo 10 - Operações Financeiras</a>
+  				<img src="/static/iconMan.png" alt="Modulo 19" class="logo" />
+				<a href="{{ url_for('em_manutencao') }}">Modulo 19 - Balancetes e Demonstração Financeiras</a>
 			</td>
 		</tr>
 		</tbody>
 		<tbody>
 		<tr>
 			<td>
-  				<img src="iconMan.png" alt="Modulo 19" class="logo" />
-				<a href="">Modulo 19 - Balancetes e Demonstração Financeira</a>
+  				<img src="/static/iconMan.png" alt="Modulo 20" class="logo" />
+				<a href="{{ url_for('em_manutencao') }}">Modulo 20 - Depositos Judiciais e Recursais</a>
 			</td>
 		</tr>
 		</tbody>
 		<tbody>
 		<tr>
 			<td>
-  				<img src="iconMan.png" alt="Modulo 20" class="logo" />
-				<a href="">Modulo 20 - Depositos Judiciais e Recursais</a>
-			</td>
-		</tr>
-		</tbody>
-		<tbody>
-		<tr>
-			<td>
-  				<img src="iconMan.png" alt="Modulo 22" class="logo" />
-				<a href="">Modulo 22 - Planejamento Economico e Financeiro</a>
+  				<img src="/static/iconMan.png" alt="Modulo 22" class="logo" />
+				<a href="{{ url_for('em_manutencao') }}">Modulo 22 - Planejamento Economico e Financeiro]</a>
 			</td>
 		</tr>
 		</tbody>
@@ -112,31 +115,5 @@
 
 </div>
 
-<script> 
-    function manafi() {
-    	window.location.href = "{{ url_for('manafi') }}";
-  }
-
-  function manacan() {
-    	window.location.href = "{{ url_for('mancan') }}";
-  }
-
-  function mancon() {
-    	window.location.href = "{{ url_for('mancon') }}";
-  }
-
-    function mancon() {
-      window.open('mancon.html', '_blank');
-    }
-
-    function maneng() {
-    	window.location.href = "{{ url_for('maneng') }}";
-  }
-  
-  function manate() {
-    	window.location.href = "{{ url_for('manate') }}";
-  }
-
-  </script>
 </body>
 </html>

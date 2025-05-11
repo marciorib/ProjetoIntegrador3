@@ -1,0 +1,20 @@
+<!-- templates/cadastrar_manual.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastrar Manual</title>
+</head>
+<body>
+  <h1>Cadastrar Novo Manual</h1>
+  <form action="/cadastrar_manual" method="post">
+    <label for="nome">Nome do Manual (ex: manafi):</label><br>
+    <input type="text" id="nome" name="nome" required><br><br>
+
+    <label for="conteudo">Conteúdo:</label><br>
+    <textarea id="conteudo" name="conteudo" rows="10" cols="80" required></textarea><br><br>
+
+    <button type="submit">Salvar</button>
+  </form>
+</body>
+</html>

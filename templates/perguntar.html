@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Consultar Manual com IA</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f6f8fa;
+            margin: 0;
+            padding: 40px;
+        }
+        h2 {
+            color: #2c3e50;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        select, input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            margin-top: 20px;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        #resposta {
+            margin-top: 30px;
+            font-size: 1.1em;
+            color: #2c3e50;
+            background: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Consulta de Manual com IA</h2>
+
+    <form id="form-pergunta">
+        <label for="manual">Selecione o manual:</label>
+        <select id="manual" name="manual">
+            {% for manual in manuais %}
+                <option value="{{ manual.nome }}">{{ manual.nome }}</option>
+            {% endfor %}
+        </select>
+
+        <label for="pergunta">Digite sua pergunta:</label>
+        <input type="text" id="pergunta" name="pergunta" required placeholder="Ex: Quais são os procedimentos de adiantamento?">
+
+        <button type="submit">Perguntar</button>
+    </form>
+
+    <div id="resposta"></div>
+
+    <script>
+        document.getElementById('form-pergunta').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const pergunta = document.getElementById('pergunta').value;
+            const id_manual = document.getElementById('manual').value;
+
+            const response = await fetch('/perguntar', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ pergunta, id_manual })
+            });
+
+            const data = await response.json();
+            document.getElementById('resposta').innerText = "Resposta: " + data.resposta;
+        });
+    </script>
+
+</body>
+</html>
