@@ -96,22 +96,63 @@ def pagina_pergunta():
 def perguntar():
     dados = request.get_json()
     pergunta = dados['pergunta']
-    id_manual = dados['id_manual']
-    manual = recuperar_manual(id_manual)
-    contexto = manual['conteudo']
-    resposta = buscar_resposta(pergunta, contexto)
+    nome_manual = dados['nome_manual']  # <- tem que bater com o nome do campo vindo do JS
+
+    manual = Manual.query.filter_by(nome=nome_manual).first()
+    if not manual:
+        return jsonify({'resposta': 'Manual não encontrado.'}), 404
+
+    resposta = buscar_resposta(pergunta, manual.conteudo)
     return jsonify({'resposta': resposta})
+
 
 # Busca resposta com BERT
 def buscar_resposta(pergunta, contexto):
-    inputs = tokenizer.encode_plus(pergunta, contexto, add_special_tokens=True, return_tensors='pt')
-    outputs = model(**inputs)
-    start_scores, end_scores = outputs.start_logits, outputs.end_logits
-    start_index = torch.argmax(start_scores)
-    end_index = torch.argmax(end_scores)
-    resposta_ids = inputs['input_ids'][0][start_index:end_index+1]
-    resposta = tokenizer.decode(resposta_ids)
-    return resposta
+    print("Tamanho original do contexto (caracteres):", len(contexto))
+
+    # Tokeniza o contexto inteiro e divide em blocos de até 512 tokens
+    tokens = tokenizer(contexto, return_tensors='pt', truncation=False, padding=False)
+    input_ids = tokens['input_ids'][0]
+    
+    max_len = 512
+    melhores_resultados = {'pontuacao': float('-inf'), 'resposta': ''}
+
+    for i in range(0, len(input_ids), max_len):
+        bloco_ids = input_ids[i:i+max_len]
+
+        # Reconstrói o texto do bloco
+        bloco_texto = tokenizer.decode(bloco_ids, skip_special_tokens=True)
+
+        inputs = tokenizer.encode_plus(
+            pergunta,
+            bloco_texto,
+            add_special_tokens=True,
+            return_tensors='pt',
+            truncation=True,
+            max_length=512
+        )
+
+        outputs = model(**inputs)
+        start_scores, end_scores = outputs.start_logits, outputs.end_logits
+
+        start_index = torch.argmax(start_scores)
+        end_index = torch.argmax(end_scores)
+
+        resposta_ids = inputs['input_ids'][0][start_index:end_index+1]
+        resposta = tokenizer.decode(resposta_ids, skip_special_tokens=True)
+
+        pontuacao = start_scores[0][start_index].item() + end_scores[0][end_index].item()
+
+        if pontuacao > melhores_resultados['pontuacao'] and resposta.strip() != "":
+            melhores_resultados['pontuacao'] = pontuacao
+            melhores_resultados['resposta'] = resposta
+
+    if melhores_resultados['resposta']:
+        return melhores_resultados['resposta']
+    else:
+        return "Desculpe, não encontrei uma resposta clara no manual."
+
+
 
 # Simulação temporária do conteúdo
 def recuperar_manual(id_manual):

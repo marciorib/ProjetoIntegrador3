@@ -1,3 +1,42 @@
 
-git remote add origin https://github.com/marciorib/Projeto-Integrador3-Flask.git
+# Ambientes virtuais
+venv/
+env/
+ENV/
+.venv/
+*.egg-info/
 
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Arquivos de log
+*.log
+
+# Variáveis de ambiente e segredos
+.env
+*.env
+
+# VSCode e outras IDEs
+.vscode/
+.idea/
+
+# Cache do pip
+pip-wheel-metadata/
+*.dist-info/
+
+# Arquivos de testes e cobertura
+htmlcov/
+.tox/
+.nox/
+.coverage
+.cache
+.pytest_cache/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Outros
+.DS_Store
+Thumbs.db
