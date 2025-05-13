@@ -1,4 +1,4 @@
-#from flask import Flask, request, jsonify, render_template
+
 from transformers import BertTokenizer, BertForQuestionAnswering
 import torch
 from flask_sqlalchemy import SQLAlchemy
@@ -23,17 +23,6 @@ def home():
 @app.route('/manafi')
 def manafi():
     return render_template('manafi.html')
-
-@app.route("/sobre")
-def pagina_sobre():
-    return """
-        <b>Programador Python</b>: assista os vídeos no
-        <a href="https://youtube.com/programadorpython">Canal no YouTube</a>
-    """
-
-@app.route("/man")
-def ola_mundo():
-    return render_template("index.html")
 
 @app.route("/em_manutencao")
 def em_manutencao():
