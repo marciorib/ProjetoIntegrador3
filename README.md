@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-Este projeto tem como objetivo melhorar a experiência do usuário na busca e visualização de manuais, eliminando a necessidade de download. A aplicação permite ao usuário cadastrar, visualizar e interagir com manuais diretamente pelo navegador, utilizando uma interface simples e integrada a uma IA que responde perguntas sobre o conteúdo.
+Este projeto tem como objetivo melhorar a experiência do usuário na busca e visualização de manuais. A aplicação permite ao usuário cadastrar, visualizar e interagir com manuais diretamente pelo navegador, utilizando uma interface simples e integrada a uma IA que responde perguntas sobre o conteúdo.
 
 ## Fluxo da aplicação:
 1. O usuário acessa a interface web via navegador.
